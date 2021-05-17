@@ -1,9 +1,6 @@
 <?php
-$identity=[
-    [
-        "username" => "taoufik",
-        "motDePasse" => "ouistiti"
-    ],
-];
+    $username= "taoufik";
+    $mot_de_passe = "ouistiti";
+
 ?>
 
