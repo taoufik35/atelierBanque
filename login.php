@@ -24,7 +24,7 @@ if(isset($_POST["username"]) && isset($_POST["mot_de_passe"])) {
       
       else{
         $error_message = "erreur d'identifiant";
-        header("Location:login.php");
+       
       }
 }
 
@@ -40,6 +40,11 @@ include "layout/header.php";
 
         
             <form action="" method="post">
+                <?php if(isset($error_message)): ?>
+                <div class="alert alert-danger text-center">
+                <?php echo $error_message; ?>
+                </div>
+            <?php endif; ?>
                 <p>
                 <div>
                     <label for="username" class="form-label">Votre nom d'utilisateur</label>
