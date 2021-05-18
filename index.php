@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+if(!isset($_SESSION["user"])) {
+    header("Location: login.php");
+    exit;
+}
+
+
 require "model/acounts.php";
 include "layout/header.php";
 $accounts = get_accounts();

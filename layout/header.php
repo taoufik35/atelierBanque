@@ -16,8 +16,12 @@
    <header class="bg-danger text-dark my-0 py-4">
         <section class="comtainer text-center">
             <h1>Ma banque en ligne </h1>
-            <p class="lead text-italic">Gerez vos comptes en 1 clique</p>
+            <p class="lead text-italic">Gerez vos comptes en 1 clique</p>  
         </section>
+
+        <?php if(isset($_SESSION["user"])): ?>
+            <a class="btn btn-dark mx-3" href="logout.php">Déconnexion</a>
+          <?php endif; ?>
    </header>
 
    <main class="container my-5">
